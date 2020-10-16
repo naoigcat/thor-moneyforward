@@ -21,9 +21,10 @@ end
 class Moneyforward < Thor
   desc "upload [Username] [Password] [Path]", "Upload csv to moneyforward"
   def upload(username, password, path) # rubocop:disable Metrics/AbcSize
+    require "csv"
+    require "rbconfig"
     cask "chromedriver"
     cask "google-chrome"
-    require "csv"
 
     data = CSV.read(path, headers: true, encoding: "CP932:UTF-8")
     index = 0
@@ -85,6 +86,7 @@ class Moneyforward < Thor
 
   no_commands do
     def cask(name)
+      return unless RbConfig::CONFIG["host_os"].match?(/darwin|mac os/)
       return if IO.popen("/usr/local/bin/brew list -1 --cask", &:read).split(/\n/).include?(name)
 
       system("/usr/local/bin/brew", "cask", "install", name)
