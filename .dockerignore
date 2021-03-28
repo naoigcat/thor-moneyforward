@@ -1,0 +1,6 @@
+.env
+.env.example
+.gitignore
+*.csv
+LICENSE
+README.md
