@@ -4,6 +4,7 @@ Bundler.require
 
 require_relative "lib/export"
 require_relative "lib/import"
+require_relative "lib/sub_account"
 
 module Selenium
   module WebDriver

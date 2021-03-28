@@ -8,20 +8,32 @@ Export/Import Money Forward expenses and incomes in csv format.
 
 ## Usage
 
-1.  Prepare csv with the following header in the root of the project directory.
+### Export/Import
 
-    ```csv
-    "計算対象","日付","内容","金額（円）","保有金融機関","大項目","中項目","メモ","振替","ID"
-    ```
+Prepare csv with the following header in the root of the project directory,
 
-2.  Run command.
+```csv
+"計算対象","日付","内容","金額（円）","保有金融機関","大項目","中項目","メモ","振替","ID"
+```
 
-    ```sh
-    docker-compose build
-    docker-compose run --rm app export
-    docker-compose run --rm app import
-    docker-compose down
-    ```
+and run below command.
+
+```sh
+docker-compose build
+docker-compose run --rm app export
+docker-compose run --rm app import
+docker-compose down
+```
+
+### Complement Sub Account
+
+Run below command.
+
+```sh
+docker-compose build
+docker-compose run --rm app sub_account JPY
+docker-compose down
+```
 
 ## Development
 
