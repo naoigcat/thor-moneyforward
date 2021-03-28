@@ -1,6 +1,6 @@
-# Upload to Money Forward
+# Exporter/Importer for Money Forward
 
-Uploads expenses and incomes to Money Forward.
+Export/Import Money Forward expenses and incomes in csv format.
 
 ## Requirements
 
@@ -18,8 +18,8 @@ Uploads expenses and incomes to Money Forward.
 
     ```sh
     docker-compose build
-    docker-compose run --rm app download
-    docker-compose run --rm app upload
+    docker-compose run --rm app export
+    docker-compose run --rm app import
     docker-compose down
     ```
 

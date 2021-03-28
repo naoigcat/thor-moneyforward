@@ -3,8 +3,8 @@ require "bundler"
 Bundler.require
 
 class Entrypoint < Thor
-  desc "download", "Download csv from MoneyForward"
-  def download # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+  desc "export", "Export csv from MoneyForward"
+  def export # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
     driver = nil
     begin
       Retryable.configure do |config|
@@ -59,8 +59,8 @@ class Entrypoint < Thor
     end
   end
 
-  desc "upload", "Upload csv to moneyforward"
-  def upload # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+  desc "import", "Import csv to moneyforward"
+  def import # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
     target = Pathname.new("00000000.csv").yield_self do |path|
       next [] unless path.exist?
 
