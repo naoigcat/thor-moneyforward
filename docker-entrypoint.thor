@@ -20,6 +20,16 @@ module Selenium
         end
       end
     end
+
+    def self.driver
+      Selenium::WebDriver.for :remote, url: "http://selenium:4444/wd/hub", capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
+        "goog:chromeOptions" => {
+          "args" => [
+            "window-size=1920,1080",
+          ],
+        },
+      )
+    end
   end
 end
 

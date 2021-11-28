@@ -20,7 +20,7 @@ class Entrypoint < Thor
       end.each do |date|
         Retryable.retryable(tries: Float::INFINITY) do
           unless driver
-            driver = Selenium::WebDriver.for :remote, url: "http://selenium:4444/wd/hub", desired_capabilities: :chrome
+            driver = Selenium::WebDriver.driver
             driver.manage.timeouts.implicit_wait = 30
             driver.navigate.to "https://moneyforward.com"
             driver.find_element(:class, "web-sign-in").click

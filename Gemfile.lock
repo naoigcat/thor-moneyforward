@@ -1,13 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    childprocess (3.0.0)
-    csv (3.1.2)
-    date (3.1.1)
+    childprocess (4.1.0)
+    csv (3.2.1)
+    date (3.2.2)
     retryable (3.0.5)
-    rubyzip (2.3.0)
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
+    rexml (3.2.5)
+    rubyzip (2.3.2)
+    selenium-webdriver (4.1.0)
+      childprocess (>= 0.5, < 5.0)
+      rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     thor (1.1.0)
 
