@@ -13,8 +13,7 @@ class Entrypoint < Thor
       Retryable.retryable(tries: 3) do
         driver = Selenium::WebDriver.driver
         driver.manage.timeouts.implicit_wait = 30
-        driver.navigate.to "https://moneyforward.com"
-        driver.find_element(:class, "web-sign-in").click
+        driver.navigate.to "https://moneyforward.com/sign_in"
         driver.find_element(:class, "ssoLink").click
         driver.find_element(:name, "mfid_user[email]").send_keys ENV["USERNAME"]
         driver.find_element(:tag_name, "form").submit
