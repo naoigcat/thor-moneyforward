@@ -9,6 +9,6 @@ services:
     volumes:
       - .:/app
   selenium:
-    image: seleniarm/standalone-chromium:4.0.0-20211111
+    image: seleniarm/standalone-chromium:4.8.3
     ports:
       - '5901:5900'

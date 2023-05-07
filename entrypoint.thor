@@ -21,13 +21,10 @@ module Selenium
     end
 
     def self.driver
-      Selenium::WebDriver.for :remote, url: "http://selenium:4444/wd/hub", capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
-        "goog:chromeOptions" => {
-          "args" => [
-            "window-size=1920,1080",
-          ],
-        },
-      )
+      options = Selenium::WebDriver::Chrome::Options.new
+      options.add_argument('--no-sandbox')
+      options.add_argument('--disable-dev-shm-usage')
+      Selenium::WebDriver.for :remote, url: "http://selenium:4444/wd/hub", options: options
     end
   end
 end

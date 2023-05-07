@@ -1,17 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    childprocess (4.1.0)
-    csv (3.2.1)
-    date (3.2.2)
+    csv (3.2.6)
+    date (3.3.3)
     retryable (3.0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
-    selenium-webdriver (4.1.0)
-      childprocess (>= 0.5, < 5.0)
+    selenium-webdriver (4.8.6)
       rexml (~> 3.2, >= 3.2.5)
-      rubyzip (>= 1.2.2)
-    thor (1.1.0)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
+    thor (1.2.1)
+    websocket (1.2.9)
 
 PLATFORMS
   ruby
@@ -24,4 +24,4 @@ DEPENDENCIES
   thor
 
 BUNDLED WITH
-   2.1.4
+   2.4.10
