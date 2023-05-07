@@ -35,16 +35,6 @@ docker-compose run --rm app sub_account JPY
 docker-compose down
 ```
 
-### Delete Category and Transfer Rules
-
-Run below command.
-
-```sh
-docker-compose build
-docker-compose run --rm app delete_rules
-docker-compose down
-```
-
 ## Development
 
 1.  Run command to start a container.
