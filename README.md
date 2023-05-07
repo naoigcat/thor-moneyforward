@@ -31,7 +31,7 @@ Run below command.
 
 ```sh
 docker-compose build
-docker-compose run --rm app sub_account JPY
+docker-compose run --rm app account JPY
 docker-compose down
 ```
 

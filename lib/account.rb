@@ -1,6 +1,6 @@
 class Entrypoint < Thor
-  desc "sub_account [NAME]", "Complement the sub account in MoneyForward"
-  def sub_account(name) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity
+  desc "account [NAME]", "Complement the sub account in MoneyForward"
+  def account(name) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity
     driver = nil
     begin
       Retryable.configure do |config|
