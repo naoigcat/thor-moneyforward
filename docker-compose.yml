@@ -12,4 +12,4 @@ services:
   selenium:
     image: seleniarm/standalone-chromium:4.0.0-20211111
     ports:
-      - '5900:5900'
+      - '5901:5900'
