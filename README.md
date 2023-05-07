@@ -19,10 +19,10 @@ Prepare csv with the following header in the root of the project directory,
 and run below command.
 
 ```sh
-docker-compose build
-docker-compose run --rm app export
-docker-compose run --rm app import
-docker-compose down
+docker compose build
+docker compose run --rm app export
+docker compose run --rm app import
+docker compose down
 ```
 
 ### Complement Sub Account
@@ -30,9 +30,9 @@ docker-compose down
 Run below command.
 
 ```sh
-docker-compose build
-docker-compose run --rm app account JPY
-docker-compose down
+docker compose build
+docker compose run --rm app account JPY
+docker compose down
 ```
 
 ## Development
@@ -40,16 +40,16 @@ docker-compose down
 1.  Run command to start a container.
 
     ```sh
-    docker-compose build
-    docker-compose run --rm --entrypoint /bin/bash app
+    docker compose build
+    docker compose run --rm --entrypoint /bin/bash app
     ```
 
-2.  Edit docker-entrypoint.thor.
+2.  Edit entrypoint.thor.
 
 3.  Run command to stop the container.
 
     ```sh
-    docker-compose down
+    docker compose down
     ```
 
 ## Author
