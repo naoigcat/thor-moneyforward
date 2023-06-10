@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 require "bundler"
 Bundler.require
-
-require_relative "lib/account"
-require_relative "lib/export"
-require_relative "lib/import"
+Pathname.glob("lib/**.rb").each(&method(:load))
 
 module Selenium
   module WebDriver
