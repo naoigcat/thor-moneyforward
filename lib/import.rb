@@ -35,9 +35,9 @@ class Entrypoint < Thor
               driver.find_element(:tag_name, "form").submit
               driver.find_element(:name, "mfid_user[password]").send_keys(ENV["PASSWORD"])
               driver.find_element(:tag_name, "form").submit
-              driver.find_element(:class, "mf-icon-pie-chart").find_element(:xpath, "..").click
-              driver.find_element(:class, "mf-mb-medium").find_element(:tag_name, "button").click
             end
+            driver.navigate.to "https://moneyforward.com/cf"
+            driver.find_element(:class, "mf-mb-medium").find_element(:tag_name, "button").click
             driver.find_element(:id, "updated-at").tap(&:clear).send_keys(row["日付"].gsub(/-/, "/"))
             price = row["金額（円）"].sub(/\u00a5/, "").to_i
             if price.positive?

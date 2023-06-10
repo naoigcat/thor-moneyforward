@@ -19,7 +19,6 @@ class Entrypoint < Thor
         driver.find_element(:tag_name, "form").submit
         driver.find_element(:name, "mfid_user[password]").send_keys ENV["PASSWORD"]
         driver.find_element(:tag_name, "form").submit
-        driver.find_element(:class, "mf-icon-pie-chart").find_element(:xpath, "..").click
         driver.get "file:///home/seluser/Downloads/"
         driver.page_source.scan(/(?<=addRow\(")download(?: \(\d+\))?(?=")/).tap do |files|
           next unless files.empty?

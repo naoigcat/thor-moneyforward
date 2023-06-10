@@ -28,8 +28,8 @@ class Entrypoint < Thor
             driver.find_element(:tag_name, "form").submit
             driver.find_element(:name, "mfid_user[password]").send_keys ENV["PASSWORD"]
             driver.find_element(:tag_name, "form").submit
-            driver.find_element(:class, "mf-icon-pie-chart").find_element(:xpath, "..").click
           end
+          driver.navigate.to "https://moneyforward.com/cf"
           driver.find_element(:xpath, "//div[contains(@class, 'uikit-year-month-select-dropdown')]").click
           driver.find_element(:xpath, "//div[contains(@class, 'uikit-year-month-select-dropdown-year-part') and text()='#{date.year}']").tap do |year|
             driver.action.move_to(year).perform
