@@ -46,7 +46,13 @@ docker compose down
 
 2.  Edit entrypoint.thor.
 
-3.  Run command to stop the container.
+3.  Lint using RuboCop.
+
+    ```sh
+    docker run --rm --volume ${PWD}:/code registry.gitlab.com/pipeline-components/rubocop:latest -d -E
+    ```
+
+4.  Run command to stop the container.
 
     ```sh
     docker compose down

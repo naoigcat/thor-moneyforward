@@ -24,9 +24,9 @@ class Entrypoint < Thor
             driver.manage.timeouts.implicit_wait = 30
             driver.navigate.to "https://moneyforward.com/sign_in"
             driver.find_element(:class, "ssoLink").click
-            driver.find_element(:name, "mfid_user[email]").send_keys ENV["USERNAME"]
+            driver.find_element(:name, "mfid_user[email]").send_keys ENV.fetch("USERNAME")
             driver.find_element(:tag_name, "form").submit
-            driver.find_element(:name, "mfid_user[password]").send_keys ENV["PASSWORD"]
+            driver.find_element(:name, "mfid_user[password]").send_keys ENV.fetch("PASSWORD")
             driver.find_element(:tag_name, "form").submit
           end
           driver.navigate.to "https://moneyforward.com/cf"

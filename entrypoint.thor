@@ -19,8 +19,8 @@ module Selenium
 
     def self.driver
       options = Selenium::WebDriver::Chrome::Options.new
-      options.add_argument('--no-sandbox')
-      options.add_argument('--disable-dev-shm-usage')
+      options.add_argument("--no-sandbox")
+      options.add_argument("--disable-dev-shm-usage")
       Selenium::WebDriver.for :remote, url: "http://selenium:4444/wd/hub", options: options
     end
   end
