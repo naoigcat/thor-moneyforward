@@ -4,7 +4,7 @@ GEM
     csv (3.2.6)
     date (3.3.3)
     retryable (3.0.5)
-    rexml (3.3.9)
+    rexml (3.4.2)
     rubyzip (2.3.2)
     selenium-webdriver (4.8.6)
       rexml (~> 3.2, >= 3.2.5)
